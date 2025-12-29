@@ -36,12 +36,19 @@ const Footer = () => {
             <p className="text-gray-700 mb-6 max-w-xs">
               Creating smart digital solutions that drive growth.
             </p>
-            <button className="bg-primary-500 hover:bg-primary-600 text-primary-50 font-medium py-3 px-6 rounded-full transition-colors duration-300 flex items-center gap-2 shadow-lg">
-              Let's Talk
-              <span className="w-6 h-6 bg-primary-50 rounded-full flex items-center justify-center">
-                <IoIosArrowForward className="h-4 w-4 text-primary-500" />
-              </span>
-            </button>
+            <a
+  href="https://wa.me/96394585707"
+  target="_blank"
+  rel="noopener noreferrer"
+>
+  <button className="bg-primary-500 hover:bg-primary-600 text-primary-50 font-medium py-3 px-6 rounded-full transition-colors duration-300 flex items-center gap-2 shadow-lg">
+    Let's Talk
+    <span className="w-6 h-6 bg-primary-50 rounded-full flex items-center justify-center">
+      <IoIosArrowForward className="h-4 w-4 text-primary-500" />
+    </span>
+  </button>
+</a>
+
           </div>
           
           <div className='flex flex-col md:flex-row justify-between lg:w-[55%] gap-8 md:gap-12'>
@@ -64,29 +71,52 @@ const Footer = () => {
               <div className="space-y-3 mb-6">
                 <div className="flex items-start gap-2">
                   <FaMapMarkerAlt className="h-5 w-5 text-gray-600 mt-0.5 flex-shrink-0" />
-                  <span className="text-gray-700">damascus, syria</span>
+                  <span className="text-gray-700">Damascus, syria</span>
                 </div>
                 <div className="flex items-start gap-2">
                   <FaEnvelope className="h-5 w-5 text-gray-600 mt-0.5 flex-shrink-0" />
-                  <span className="text-gray-700">support@figma.com</span>
+                 <a
+  href="mailto:technopro.sy@gmail.com"
+  className="text-gray-700 hover:text-primary-500 transition"
+>
+  technopro.sy@gmail.com
+</a>
+
                 </div>
               </div>
 
-              <h3 className="text-lg font-semibold text-black mb-4">Follow us</h3>
-              <div className="flex space-x-4">
-                {[
-                  { name: 'Instagram', Icon: AiFillInstagram },
-                  { name: 'Facebook', Icon: FaFacebookSquare },
-                  { name: 'LinkedIn', Icon: FaLinkedin }
-                ].map((social) => (
-                  <a 
-                    key={social.name} 
-                    href="#" 
-                    className="text-gray-700 hover:text-primary-500 transition-colors duration-300"
-                    aria-label={social.name}
-                  >
-                    <social.Icon className="h-6 w-6" />
-                  </a>
+             <h3 className="text-lg font-semibold text-black mb-4">Follow us</h3>
+
+<div className="flex space-x-4">
+  {[
+    {
+      name: 'Instagram',
+      Icon: AiFillInstagram,
+      url: 'https://www.instagram.com/technopro.sy'
+    },
+    {
+      name: 'Facebook',
+      Icon: FaFacebookSquare,
+      url: 'https://www.facebook.com/share/1DAucQWnmj'
+    },
+    {
+      name: 'LinkedIn',
+      Icon: FaLinkedin,
+      url: 'https://www.linkedin.com/company/technopro-sy'
+    }
+  ].map((social) => (
+    <a
+      key={social.name}
+      href={social.url}
+      target="_blank"
+      rel="noopener noreferrer"
+      className="text-gray-700 hover:text-primary-500 transition-colors duration-300"
+      aria-label={social.name}
+    >
+      <social.Icon className="h-6 w-6" />
+    </a>
+
+
                 ))}
               </div>
             </div>

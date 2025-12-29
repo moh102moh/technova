@@ -74,7 +74,7 @@ export default function Home() {
   }, []);
 
   return (
-    <main className="relative min-h-screen bg-background-dark text-white overflow-hidden">
+ <main className="relative min-h-screen bg-background-dark text-white overflow-x-hidden">
       <div className="absolute inset-0 z-0">
         <div className="absolute top-[-20%] right-[-10%] w-[80vh] h-[80vh] rounded-full bg-primary-400/10 blur-3xl"></div>
         <div className="absolute bottom-[-20%] left-[-10%] w-[70vh] h-[70vh] rounded-full bg-primary-400/5 blur-3xl"></div>

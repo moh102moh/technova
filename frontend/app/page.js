@@ -292,7 +292,7 @@ export default function Home() {
         )}
       </header>
 
-     <div className="overflow-x-hidden">
+     <div>
 
         <section id="hero" aria-label="Hero section">
           <HeroSection />

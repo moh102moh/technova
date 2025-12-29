@@ -10,36 +10,11 @@ import Footer from './components/Footer';
 import PortfolioSection from './components/PortfolioSection';
 
 export default function Home() {
-  const [isScrolled, setIsScrolled] = useState(false);
+  
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [activeSection, setActiveSection] = useState('hero');
 
-  useEffect(() => {
-    const handleScroll = () => {
-      setIsScrolled(window.scrollY > 50);
-      
-      const sections = ['hero', 'about', 'services', 'portfolio', 'why', 'contact'];
-      const currentSection = sections.find(section => {
-        const element = document.getElementById(section);
-        if (element) {
-          const rect = element.getBoundingClientRect();
-          return rect.top <= 100 && rect.bottom >= 100;
-        }
-        return false;
-      });
-      
-      if (currentSection) {
-        setActiveSection(currentSection);
-      }
-    };
-    
-    window.addEventListener('scroll', handleScroll, { passive: true });
-    handleScroll();
-    
-    return () => {
-      window.removeEventListener('scroll', handleScroll);
-    };
-  }, []);
+
 
   useEffect(() => {
     const handleResize = () => {
@@ -105,13 +80,8 @@ export default function Home() {
         <div className="absolute bottom-[-20%] left-[-10%] w-[70vh] h-[70vh] rounded-full bg-primary-400/5 blur-3xl"></div>
       </div>
 
-      <header 
-        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-          isScrolled 
-            ? 'bg-background-dark/95 backdrop-blur-md shadow-lg' 
-            : 'bg-transparent'
-        }`}
-      >
+     <header className="relative z-50 bg-transparent">
+
         <div className="container mx-auto px-4 sm:px-6 py-4 flex justify-between items-center">
           <div className="w-40 sm:w-48 md:w-60 lg:w-64">
             <img
@@ -322,7 +292,8 @@ export default function Home() {
         )}
       </header>
 
-      <div className="overflow-x-hidden pt-16 md:pt-0">
+     <div className="overflow-x-hidden">
+
         <section id="hero" aria-label="Hero section">
           <HeroSection />
         </section>

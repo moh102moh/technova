@@ -79,9 +79,14 @@ export default function ContactSection() {
                   <h3 className="text-lg sm:text-xl md:text-2xl font-medium text-primary-50">
                     Phone Number
                   </h3>
-                  <p className="text-sm sm:text-base md:text-lg text-gray-300 mt-1">
-                    +963 3456 789
-                  </p>
+                    <a
+    href="https://wa.me/963945852707"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="text-sm sm:text-base md:text-lg text-gray-300 mt-1 hover:text-primary-400 transition"
+  >
+    +963 945852707
+  </a>
                 </div>
               </div>
               
@@ -97,9 +102,12 @@ export default function ContactSection() {
                   <h3 className="text-lg sm:text-xl md:text-2xl font-medium text-primary-50">
                     Email
                   </h3>
-                  <p className="text-sm sm:text-base md:text-lg text-gray-300 mt-1 break-all">
-                    demo@gmail.com
-                  </p>
+                  <a
+    href="mailto:technopro.sy@gmail.com"
+    className="text-sm sm:text-base md:text-lg text-gray-300 mt-1 break-all hover:text-primary-400 transition"
+  >
+    technopro.sy@gmail.com
+  </a>
                 </div>
               </div>
             </div>

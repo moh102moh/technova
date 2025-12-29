@@ -53,17 +53,34 @@ export default function WhyUsSection() {
           </div>
         </div>
         <div className="pt-0 md:pt-0 pb-12">
-        <button
-          className="bg-primary-500 text-primary-50 font-medium px-6 md:px-8 lg:px-10 py-3 md:py-4 
-                   rounded-full hover:bg-primary-600 flex items-center gap-2 text-sm md:text-xl
-                   hover:text-sm group hover:px-5 hover:py-3 transition-all duration-500
-                   shadow-[0px_1px_3px_0px_#6BACCC1A,0px_5px_5px_0px_#6BACCC17,0px_12px_7px_0px_#6BACCC0D,0px_21px_8px_0px_#6BACCC03,0px_32px_9px_0px_#6BACCC00]"
-        >
-          Let's Talk
-          <span className="w-6 h-6 md:w-7 md:h-7 bg-primary-50 rounded-full flex items-center justify-center transition-all duration-300 group-hover:hidden">
-            <IoIosArrowForward className="text-base md:text-xl text-primary-400" />
-          </span>
-        </button>
+        <a
+  href="https://wa.me/963945852707"
+  target="_blank"
+  rel="noopener noreferrer"
+>
+  <button
+    className="
+      bg-primary-500 
+      text-primary-50 
+      font-medium 
+      px-6 md:px-8 lg:px-10 
+      py-3 md:py-4
+      rounded-full 
+      flex items-center gap-2 
+      text-sm md:text-xl
+      transition-colors duration-300
+      hover:bg-primary-600
+      shadow-[0px_1px_3px_0px_#6BACCC1A,0px_5px_5px_0px_#6BACCC17,0px_12px_7px_0px_#6BACCC0D,0px_21px_8px_0px_#6BACCC03,0px_32px_9px_0px_#6BACCC00]
+    "
+  >
+    Let's Talk
+
+    <span className="w-6 h-6 md:w-7 md:h-7 bg-primary-50 rounded-full flex items-center justify-center">
+      <IoIosArrowForward className="text-base md:text-xl text-primary-400" />
+    </span>
+  </button>
+</a>
+
         </div>
       </div>
     </section>
